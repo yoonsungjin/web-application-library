@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StdLayout.master.cs" Inherits="LibraryWebApp_SungjinYoon.StdLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Library Web App</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+       
+               <div style="text-align:center;background-color:#184ba7;color:azure">
+                    <h1>Library Web App</h1>
+                </div>
+                <div style="float:right">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/login.aspx" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Welcome.aspx" OnClick="LinkButton2_Click">Logout</asp:LinkButton>
+                </div>
+                <div style="min-height:600px">
+                    <div style="min-height:600px;background-color:azure;float:left;width:100%">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div style="text-align:center;background-color:cornflowerblue;color:azure">
+                    <h4>Copyright Sungjin Yoon</h4>
+                </div>            
+        
+        </div>
+    </form>
+</body>
+</html>
